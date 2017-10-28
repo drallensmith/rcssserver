@@ -709,6 +709,9 @@ public:
     virtual
     void playModeChange( PlayMode pm );
 
+    virtual
+    void ballCaught( const Player & catcher );
+
 private:
     bool inHFOArea(const PVector& pos);
 
