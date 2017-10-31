@@ -818,7 +818,7 @@ public:
 
     int catchBanCycle() const { return M_catch_ban_cycle; }
     int slowDownFactor() const { return M_slow_down_factor; }
-    bool useOffside() const { return M_use_offside; }
+    bool useOffside() const { return M_use_offside && (! M_hfo); }
     bool kickOffOffside() const { return M_forbid_kick_off_offside; }
     double offsideKickMargin() const { return M_offside_kick_margin; }
 

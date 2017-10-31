@@ -1521,7 +1521,7 @@ ServerParam::convertToStruct() const
     tmp.M_hear_decay = htons( static_cast< Int16 >( M_hear_decay ) );
     tmp.cban_cycle = htons( static_cast< Int16 >( M_catch_ban_cycle ) );
     tmp.slow_down_factor = htons( static_cast< Int16 >( M_slow_down_factor ) );
-    tmp.useoffside = htons( static_cast< Int16 >( M_use_offside ) );
+    tmp.useoffside = htons( static_cast< Int16 >( M_use_offside && (! M_hfo) ) );
     tmp.kickoffoffside = htons( static_cast< Int16 >( M_forbid_kick_off_offside ) );
     tmp.offside_kick_margin = htonl( static_cast< Int32 >( SHOWINFO_SCALE2 * M_offside_kick_margin ) );
     tmp.audio_dist = htonl( static_cast< Int32 >( SHOWINFO_SCALE2 * M_audio_cut_dist ) );
